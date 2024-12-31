@@ -169,9 +169,9 @@ boxes.forEach(b =>{
     void row2.offsetWidth;
 
     column1.style.animation = "heightGrow .3s ease-out 0s forwards";
-    column2.style.animation = "heightGrow .3s ease-out 0s forwards";
-    row1.style.animation = "widthGrow .3s ease-out 0s forwards";
-    row2.style.animation = "widthGrow .3s ease-out 0s forwards";
+    column2.style.animation = "heightGrow .3s ease-out .2s forwards";
+    row1.style.animation = "widthGrow .3s ease-out .4s forwards";
+    row2.style.animation = "widthGrow .3s ease-out .6s forwards";
     
   }
 

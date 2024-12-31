@@ -106,7 +106,7 @@ body{
     border-radius: 2px;
 }
 .grid div:nth-child(11){
-    animation: heightGrow .3s ease-out 0s forwards;
+    animation: heightGrow .3s ease-out .2s forwards;
     background-color: #0b6159;
     width: 100%;
     grid-column: 8/9;
@@ -115,7 +115,7 @@ body{
 }
 
 .grid div:nth-child(12){
-    animation: widthGrow .3s ease-out 0s forwards;
+    animation: widthGrow .3s ease-out .4s forwards;
     background-color: #0b6159;
     height: 100%;
     grid-column: 1/12;
@@ -124,7 +124,7 @@ body{
 }
 
 .grid div:nth-child(13){
-    animation: widthGrow .3s ease-out 0s forwards;
+    animation: widthGrow .3s ease-out .6s forwards;
     background-color: #0b6159;
     height: 100%;
     grid-column: 1/12;
