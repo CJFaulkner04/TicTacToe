@@ -16,6 +16,10 @@ let column2 = document.querySelector('.grid div:nth-child(11)');
 let row1 = document.querySelector('.grid div:nth-child(12)');
 let row2 = document.querySelector('.grid div:nth-child(13)');
 
+// x's and o's
+let xs = document.querySelectorAll('.x');
+let os = document.querySelectorAll('.o');
+
 let turn = true;
 let xTurn = true;
 let oTurn = false;
@@ -42,6 +46,16 @@ boxes.forEach(b =>{
                     won = 'X';
                     xWinCount++;
                     xWin.innerText=xWinCount;
+
+                    //animation
+                    boxes.forEach(b => {
+                        if((b.classList).contains('x')){
+                            b.style.animation = "winner .5s ease-out 0s forwards";
+                        } else {
+                            b.style.animation = "none";
+                        }
+                            
+                    })
                 }
             } 
             //o turn
@@ -55,6 +69,16 @@ boxes.forEach(b =>{
                     won = 'O';
                     oWinCount++;
                     oWin.innerText=oWinCount;
+
+                    //animation
+                    boxes.forEach(b => {
+                        if((b.classList).contains('o')){
+                            b.style.animation = "winner .5s ease-out 0s forwards";
+                        } else {
+                            b.style.animation = "none";
+                        }
+                            
+                    })
                 }
             }
             
@@ -92,6 +116,7 @@ boxes.forEach(b =>{
         b.innerText = '';
         b.classList.remove('o');
         b.classList.remove('x');
+        b.style.animation = "none";
     })
 
     winner = false;
@@ -111,6 +136,7 @@ boxes.forEach(b =>{
         b.innerText = '';
         b.classList.remove('o');
         b.classList.remove('x');
+        b.style.animation = "none";
     })
 
     winner = false;
@@ -180,3 +206,4 @@ boxes.forEach(b =>{
     oFirst()
     // restart()
   });
+  
