@@ -120,9 +120,9 @@ boxes.forEach(b =>{
     oWinCount = 0;
     xCount = 0;
     oCount = 0;
-    draws.innerText = drawCount;
-    oWin.innerText=oWinCount;
-    xWin.innerText=xWinCount;
+    draws.innerText = '';
+    oWin.innerText= '';
+    xWin.innerText= '';
 
     if(xTurn){
         turn = true;
