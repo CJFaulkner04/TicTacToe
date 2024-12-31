@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div class="top">
+            <h1>Tic<a class="x">-</a>Tac<a class="o">-</a>Toe</h1>
+            <div class="countContainer">
+                <div class="count">
+                    <p>x<a class="x">-</a>wins: <a id="xWin"></a></p>
+                </div>
+                <div class="count">
+                    <p>draws: <a id="draw"></a></p>
+                </div>
+                <div class="count">
+                    <p>o<a class="o">-</a>wins: <a id="oWin"></a></p>
+                </div>
+            </div>
+        </div>
+        <section class="grid">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <div class="bottom">
+            <div class="choose">
+                <div style="background-color: #6ff1e4;" id="x-first">x-first</div>
+                <p>or</p>
+                <div id="o-first">o-first</div>
+            </div>
+            <div>
+                <div class="restart">restart</div>
+                <div class="clear">clear</div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
