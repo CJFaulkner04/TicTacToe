@@ -20,6 +20,7 @@ let row2 = document.querySelector('.grid div:nth-child(13)');
 let xs = document.querySelectorAll('.x');
 let os = document.querySelectorAll('.o');
 
+let empty = true;
 let turn = true;
 let xTurn = true;
 let oTurn = false;
@@ -175,19 +176,41 @@ boxes.forEach(b =>{
   }
 
   let xFirst = () => {
-    turn = true;
-    xTurn = true;
-    oTurn = false;
-    xFirstBtn.style.backgroundColor = '#6ff1e4';
-    oFirstBtn.style.backgroundColor = '#bbeae6';
+    checkEmpty()
+    if(empty|| winner || draw){
+      turn = true;
+      xTurn = true;
+      oTurn = false;
+      console.log('hi');
+      xFirstBtn.style.backgroundColor = '#6ff1e4';
+      oFirstBtn.style.backgroundColor = '#bbeae6';
+    }
+    
+    
   }
 
   let oFirst = () => {
-    turn = false;
-    oTurn = true;
-    xTurn = false;
-    oFirstBtn.style.backgroundColor = '#6ff1e4';
-    xFirstBtn.style.backgroundColor = '#bbeae6';
+    if(empty|| winner || draw){
+      turn = false;
+      oTurn = true;
+      xTurn = false;
+      console.log('hi')
+      oFirstBtn.style.backgroundColor = '#6ff1e4';
+      xFirstBtn.style.backgroundColor = '#bbeae6';
+    }
+    
+  }
+
+  let checkEmpty = () => {
+    let str = '';
+    for(let i = 0; i < boxes.length; i++){
+      str += boxes[i].innerText;
+    }
+    if(str == ''){
+      empty = true;
+    } else {
+      empty = false;
+    }
   }
 
   resBtn.addEventListener('click', () => {
